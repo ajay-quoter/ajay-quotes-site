@@ -1,2 +1,5 @@
-const data = require('./quotes.json');
-console.log(data.length);
+fetch("./quotes.json")
+.then(response => {
+   return response.json();
+})
+.then(data => console.log(data.length));
